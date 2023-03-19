@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+
+/* Disable/override backgrounds */
+
+main
+{
+  /* text glow */  
+  color: #e9e7dc;
+}
+
+main .flex-col.items-center.text-sm::before
+{  
+  content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-size: 100% 8px;
+	z-index: 0;
+	pointer-events: none;
+}
+main .flex-col.items-center.text-sm > div:nth-child(even) > div
+{
+  padding-left: 15px;
+  background-color: #75878a;
+  font-weight: bold;
+  color: #273c47 ;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+main .flex-col.items-center.text-sm > div:nth-child(odd) > div 
+{
+  padding-left: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #395260;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+
+}
+/* main .flex-col.items-center.text-sm > div:nth-child(odd) > div > div > div > pre
+{
+   color: red;
+   background: #395260;
+} */
+
+
+/* Disable all backgrounds for terminal theme */
+.dark main .dark\:bg-gray-800
+{
+  color: #d1d9e0 !important;
+  font-size: large !important;
+  background:#161823;
+}
+
+
+
+main > div:last-child
+{
+	/* Disable that weird gradient */
+	background: transparent;
+}
+
+.dark main > div:last-child
+{
+	/* Disable that weird gradient */
+	background: transparent;
+}
+
+/* Style Input */
+main > div.absolute > form
+{
+	margin: 0;
+  max-width: 100%;
+}
+
+main > div.absolute > div:last-child
+{
+	display:none;
+}
+
+main > div.absolute > form > div > div.flex.flex-col
+{
+	background-color: transparent;
+  box-shadow:none;
+  color: inherit;
+  border:0;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+}
+
+main > div.absolute > form > div > div.flex.flex-col:before
+{
+	content:">";
+  position:absolute;
+  left:0px;
+  margin-top:-1px;
+  font-size: 16px;
+}
+
+main .btn-neutral
+{
+  background-color: #393e3c;
+  color: inherit;
+  border: none;
+}
+
+main .btn-neutral:hover
+{
+  background-color: #737977;
+}
+
+main .dark .btn-neutral
+{
+  background-color: #a2aea9;
+  color: inherit;
+  border: none;
+}
+
+main .btn-primary
+{
+  background-color: #585c57;
+  color: inherit;
+}
+
+main .btn-primary:hover
+{
+  background-color: #2b2d2c;
+  color: inherit;
+}
+
+/* code box title */
+.dark main .bg-gray-800
+{
+  background-color: #2d2d2f;
+}
+/*code box */
+.dark main .bg-gray-800.text-gray-200
+{
+  color: rgb(241, 165, 24);
+}
+
+main .flex-col.items-center.text-sm > div
+{	
+	/* background: transparent;  transparent it so we can see the background image */
+  background: transparent;
+	/* Font */
+	border:none;
+}
+
+main .flex-col.items-center.text-sm > div > div
+{	
+	margin: 0;
+  margin-left: 1em;
+  padding-bottom:0;
+  max-width: 90%;
+  min-width: 900px;
+}
+
+.dark main .flex-col.items-center.text-sm > div
+{	
+  
+}
+
+/* Font Color */
+main .flex-col.items-center.text-sm > div
+{
+ 
+}
+
+.dark main .flex-col.items-center.text-sm > div
+{
+}
+
+main .flex-col.items-center.text-sm > div .prose
+{	
+	color: inherit;
+}
+
+.dark main .flex-col.items-center.text-sm > div .prose
+{	
+		/* color: inherit; */
+  color: #f6e69b;
+}
+
+/* Disable Human/AI icons */
+main .flex-col.items-center.text-sm > div > div > div.items-end:first-child div:first-child
+{	
+	display:none;
+}
+
+main .flex-col.items-center.text-sm > div
+{	
+  position: relative;  
+}
+
+main .flex-col.items-center.text-sm > div > div > div.items-end:first-child
+{	
+  position: absolute;
+  left: 0px;
+  justify-content: left;
+}
+
+main .flex-col.items-center.text-sm > div > div > div.items-end:first-child div.text-xs
+{	
+	position: absolute;
+  transform: 0 !important;
+  -webkit-transform: 0 !important;
+  justify-content: left;
+  justify-items: left;
+  top: -16px;
+  left: 65px;
+  visibility: visible !important;
+}
+
+.text-gray-800
+{
+  color: inherit;
+}
+
+.dark main .dark\:text-gray-400
+{
+  color:inherit;
+}
+
+.bg-gray-50,
+.bg-gray-100
+{
+  background-color: #4f5351;
+  color:inherit;
+}
+
+button.bg-gray-50:hover,
+button.bg-gray-100:hover
+{
+  background-color: #42504a;
+  color:inherit;
+}
+
+.text-gray-700
+{
+  color: inherit;
+}
+
+.text-gray-900
+{
+  /* color: rgb(53, 46, 46); */
+ 
+}
+
+.dark main .dark\:bg-gray-700
+{
+  background-color: #353c39;
+  color:inherit;
+}
+
+.dark main .dark\:hover\:bg-gray-900:hover
+{
+  background-color: #5e6763;
+}
+
+.dark main .dark\:bg-white\/5
+{
+  background-color: #5b615e;
+  color: inherit;
+}
+
+.dark main .dark\:text-gray-100
+{
+  color: white;
+}
+
+.md\:bg-vert-light-gradient
+{
+  background: none;
+}
+
