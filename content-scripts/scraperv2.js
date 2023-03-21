@@ -28,6 +28,11 @@ async function getAccountStatus(){
         }).then(response => {
             if (response.ok) {
                 return response.json()
+            }else{
+                //return error;
+                console.error('====errr====', response);    
+
+                return ;
             }
         })
     }
@@ -39,4 +44,11 @@ async function getAccountStatus(){
     document.body.appendChild(document.createElement(`input`)).setAttribute("id", "plusNetwork")
     document.querySelector("#plusNetwork").setAttribute("type", "hidden")
     document.querySelector("#plusNetwork").value = plusVal
+}
+
+function createElement(){
+    let el = document.createElement('div');
+    let child = document.createElement('input');
+    el.appendChild(child);
+    return el;
 }

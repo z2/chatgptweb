@@ -339,7 +339,7 @@ async function insertPromptTemplatesSection (templates = window.prompttemplates,
     <div class="${css`column`}">
     ${svg`ChatBubble`}
     <div>
-    <h2 class="${css`h2`}" style="margin-bottom: 5px">ChatGPT Prompt Genius Templates</h2>
+    <h2 class="${css`h2`}" style="margin-bottom: 5px" id="idtitle">ChatGPT Prompt Templates</h2>
     <div class="${css`paginationText`}" id="cgpt-pg-ad"></div>
     <ul class="flex flex-col gap-3.5">
     

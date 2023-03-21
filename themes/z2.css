@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 
+svg {
+  color: orange;
+}
+a.flex.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm > svg {
+  fill: rgb(249, 206, 191);
+}
 /* Disable/override backgrounds */
 
 main
@@ -7,6 +13,32 @@ main
   /* text glow */  
   color: #e9e7dc;
 }
+/* menu bar */
+div.dark.hidden.bg-gray-900 {
+  /* background: #384764; */
+  background: #395260;
+}
+.flex-1.text-ellipsis.max-h-5.overflow-hidden.break-all.relative{
+  color: blanchedalmond;
+}
+
+a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm {
+  
+  color: burlywood;
+}
+
+.absolute.inset-y-0.right-0.w-8.z-10.bg-gradient-to-l.from-gray-900.group-hover\:from-\[\#2A2B32\] {
+  background: #3b1d1d00;
+}
+
+button.btn.relative.btn-primary {
+  background: #ff70008a;
+}
+
+button.btn.relative.btn-primary:hover {
+  background: #eeebe98a;
+}
+
 
 main .flex-col.items-center.text-sm::before
 {  
@@ -153,14 +185,32 @@ main .flex-col.items-center.text-sm > div
 	border:none;
 }
 
-main .flex-col.items-center.text-sm > div > div
-{	
-	margin: 0;
-  margin-left: 1em;
-  padding-bottom:0;
-  max-width: 90%;
-  min-width: 900px;
+/* Styles for screens larger than 2046px (desktop devices) */
+@media screen and (min-width: 1620px)  {
+  main .flex-col.items-center.text-sm > div > div
+  {	
+    margin: 0;
+    margin-left: 1em;
+    padding-bottom:0;
+    max-width: 70%;
+    min-width: 900px;
+  }
 }
+
+/* Styles for screens smaller than 2046px (desktop devices) */
+@media screen and (max-width: 1620px) {
+  main .flex-col.items-center.text-sm > div > div
+  {	
+    margin: 0;
+    margin-left: 1em;
+    padding-bottom:0;
+    max-width: 90%;
+    min-width: 900px;
+  }
+}
+
+
+
 
 .dark main .flex-col.items-center.text-sm > div
 {	
