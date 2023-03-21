@@ -6,6 +6,9 @@ svg {
 a.flex.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm > svg {
   fill: rgb(249, 206, 191);
 }
+a.flex.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm {
+  color: #acacbe;
+}
 /* Disable/override backgrounds */
 
 main
