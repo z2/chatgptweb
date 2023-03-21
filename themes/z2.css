@@ -186,7 +186,7 @@ main .flex-col.items-center.text-sm > div
 }
 
 /* Styles for screens larger than 2046px (desktop devices) */
-@media screen and (min-width: 2046px)  {
+@media screen and (min-width: 1620px)  {
   main .flex-col.items-center.text-sm > div > div
   {	
     margin: 0;
@@ -198,7 +198,7 @@ main .flex-col.items-center.text-sm > div
 }
 
 /* Styles for screens smaller than 2046px (desktop devices) */
-@media screen and (max-width: 2046px) {
+@media screen and (max-width: 1620px) {
   main .flex-col.items-center.text-sm > div > div
   {	
     margin: 0;

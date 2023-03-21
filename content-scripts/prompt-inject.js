@@ -41,29 +41,29 @@ function bigWrapper() {
     let adInterval;
     let adcontent;
     chrome.runtime.onMessage.addListener(
-        function (request, sender, sendResponse) {
-            if (request.type === "adresponse") {
-                console.log("AD RECEIVED")
-                let adDiv = document.getElementById("cgpt-pg-ad")
-                console.log(adDiv)
-                adcontent = request.ad
-                console.log(adcontent)
-                if (adDiv) {
-                    console.log("TRUE")
-                    adDiv.innerHTML = adcontent
-                }
-                else {
-                    adInterval = setInterval(pollAd, 1000)
-                }
+        // function (request, sender, sendResponse) {
+        //     if (request.type === "adresponse") {
+        //         console.log("AD RECEIVED")
+        //         let adDiv = document.getElementById("cgpt-pg-ad")
+        //         console.log(adDiv)
+        //         adcontent = request.ad
+        //         console.log(adcontent)
+        //         if (adDiv) {
+        //             console.log("TRUE")
+        //             adDiv.innerHTML = adcontent
+        //         }
+        //         else {
+        //             adInterval = setInterval(pollAd, 1000)
+        //         }
 
-                function pollAd() {
-                    if (adDiv) {
-                        adDiv.innerHTML = adcontent;
-                        clearInterval(adInterval)
-                    }
-                }
-            }
-        }
+        //         function pollAd() {
+        //             if (adDiv) {
+        //                 adDiv.innerHTML = adcontent;
+        //                 clearInterval(adInterval)
+        //             }
+        //         }
+        //     }
+        // }
     );
 
     function openPrompts() {
