@@ -61,19 +61,19 @@ chrome.runtime.onMessage.addListener( async function(message) {
         });
 	}
     else if (message.type === "ad"){
-        console.log("HEY!")
-        const host = `https://raw.githubusercontent.com/benf2004/ChatGPT-History/master/public`;
-        const rando = generateUUID() // to not get cached version because headers were causing problems.
-        const response = await fetch(`${host}/ads/current.txt?dummy=${rando}`);
-        if (!response.ok) {
-            throw new Error("HTTP error " + response.status);
-        }
-        const text = await response.text();
-        console.log({ad:text});
-        chrome.tabs.query({active: true, lastFocusedWindow: true}, (tabs) => {
-            const [tab] = tabs;
-            chrome.tabs.sendMessage(tab.id, {ad: text, type: "adresponse"});
-        });
+        // console.log("HEY!")
+        // const host = `https://raw.githubusercontent.com/benf2004/ChatGPT-History/master/public`;
+        // const rando = generateUUID() // to not get cached version because headers were causing problems.
+        // const response = await fetch(`${host}/ads/current.txt?dummy=${rando}`);
+        // if (!response.ok) {
+        //     throw new Error("HTTP error " + response.status);
+        // }
+        // const text = await response.text();
+        // console.log({ad:text});
+        // chrome.tabs.query({active: true, lastFocusedWindow: true}, (tabs) => {
+        //     const [tab] = tabs;
+        //     chrome.tabs.sendMessage(tab.id, {ad: text, type: "adresponse"});
+        // });
     }
 });
 
