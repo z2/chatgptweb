@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "ChatGPT Web",
   "description": "Discover, share, import, and use the best prompts for ChatGPT & save your chat history locally (formerly ChatGPT History)",
-  "version": "3.0.1",
-  "permissions": ["storage", "unlimitedStorage", "contextMenus","notifications"],
+  "version": "3.1.2",
+  "permissions": ["storage", "unlimitedStorage", "contextMenus","notifications","tabs"],
   "background": {
     "service_worker": "background.js"
   },

@@ -136,7 +136,7 @@ function hideTitleAndExamples(title, isPlus) {
 
 // the "New Chat" buttons to clear the selected prompt template when clicked
 function setupSidebar () {
-    let newChatButton = document.querySelector('nav').firstChild
+    let newChatButton = document.querySelector('nav')?.firstChild
     newChatButton.addEventListener('click', () => {
         if (document.querySelector('#conversationID')){
             document.querySelector('#conversationID').remove()
@@ -295,13 +295,17 @@ async function insertPromptTemplatesSection (templates = window.prompttemplates,
         // Remove the "h-full" calss from title.parentElement in plus
         title.parentElement.classList.remove('h-full')
     }
+    try {
+        if (isCompact){
+            //promptTemplateSection?.pageSize = 10
+        }
+        else{
+           // promptTemplateSection?.pageSize = 5
+        }
+    } catch (error) {
+        
+    }
 
-    if (isCompact){
-        promptTemplateSection.pageSize = 10
-    }
-    else{
-        promptTemplateSection.pageSize = 5
-    }
 
     tagStyling()
 
@@ -485,13 +489,18 @@ let globalFiltered = null;
 function updateTemplates(templates = window.prompttemplates, category="", searchTerm="", tagList =globalTags){
     globalTags = tagList
     globalTemplates = templates
+    try {
+        if (isCompact){
+            promptTemplateSection.pageSize = 10
+        }
+        else{
+            promptTemplateSection.pageSize = 5
+        }
+        
+    } catch (error) {
+        
+    }
 
-    if (isCompact){
-        promptTemplateSection.pageSize = 10
-    }
-    else{
-        promptTemplateSection.pageSize = 5
-    }
 
     let filteredTemplates = templates.filter(template => tagList.every(tag => template.tags?.includes(tag)))
     globalFiltered = filteredTemplates;
@@ -560,13 +569,19 @@ function nextPromptTemplatesPage () {
     let check = globalFiltered ?? templates
 
     promptTemplateSection.currentPage++
-    promptTemplateSection.currentPage = Math.min(
-        Math.floor(
-            (check.length - 1) /
-            promptTemplateSection.pageSize
-        ),
-        promptTemplateSection.currentPage
-    )
+    try {
+        promptTemplateSection.currentPage = Math.min(
+            Math.floor(
+                (check.length - 1) /
+                promptTemplateSection.pageSize
+            ),
+            promptTemplateSection.currentPage
+        )
+        
+    } catch (error) {
+        
+    }
+
     // Update the section
     updateTemplates(globalTemplates, "", "", globalTags)
 }

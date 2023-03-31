@@ -346,7 +346,7 @@ function startScraper() {
     });
 
     // this is also called the new chat button
-    let reset = document.querySelector("nav").firstChild
+    let reset = document.querySelector("nav")?.firstChild
     reset.addEventListener('click', function () {
         clearInterval(interval) // stop saving
         id = ""

@@ -143,3 +143,12 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         });
     }
 });
+
+// chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+//     if (changeInfo.status === 'complete') {
+//         console.log('=== tab on load====');
+//         chrome.tabs.executeScript(tabId, {
+//             code: 'document.querySelector(\'link[rel*="icon"]\').href = "icon/icons8-buddha-64.png"'
+//         });
+//     }
+// });

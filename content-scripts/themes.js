@@ -517,8 +517,14 @@ function createButton(iconHTML, buttonText)
  */
 function readdThemeSelect()
 {
-	var nav = document.querySelector("nav");
-	nav.appendChild(menuThemeEditorButton);
+	try {
+		var nav = document.querySelector("nav");
+		nav.appendChild(menuThemeEditorButton);
+		
+	} catch (error) {
+		
+	}
+
 }
 
 // always place at the end because "let" statements can't be used before they're declared.

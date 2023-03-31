@@ -82,10 +82,15 @@ function bigWrapper() {
     }
 
     function newChatSetup() {
-        let newChatButton = document.querySelector('nav').firstChild
-        newChatButton.addEventListener('click', () => {
-            setTimeout(bridge, 500)
-        })
+        try {
+            let newChatButton = document.querySelector('nav').firstChild
+            newChatButton.addEventListener('click', () => {
+                setTimeout(bridge, 500)
+            })
+        } catch (error) {
+            
+        }
+
     }
 
 // listen for page changes
