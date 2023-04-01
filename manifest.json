@@ -2,8 +2,10 @@
   "manifest_version": 3,
   "name": "ChatGPT Web",
   "description": "Discover, share, import, and use the best prompts for ChatGPT & save your chat history locally (formerly ChatGPT History)",
-  "version": "3.3.3",
-  "permissions": ["storage", "unlimitedStorage", "contextMenus","notifications","tabs"],
+  "version": "3.3.8",
+  "permissions": ["storage", "unlimitedStorage", 
+  "contextMenus","notifications","tabs","favicon",
+  "https://chat.openai.com/*","activeTab"],
   "background": {
     "service_worker": "background.js"
   },
@@ -28,8 +30,7 @@
       "matches": [
         "https://chat.openai.com/chat*"
       ],
-      "js": ["content-scripts/change-icon.js"],
-      "run_at":"document_end"
+      "js": ["content-scripts/change-icon.js"]
     }
   ],
   "web_accessible_resources" : [{
@@ -45,7 +46,7 @@
     "use_dynamic_url": true
   }],
   "action": {
-    "default-title": "ChatGPT Prompt Genius"
+    "default-title": "ChatGPT WEB"
   },
   "icons":{
     "16": "icons/icons8-buddha-64.png",
